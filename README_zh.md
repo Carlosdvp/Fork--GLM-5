@@ -75,6 +75,7 @@ GLM-5.2 支持使用以下多种框架部署，欢迎尝试：
 - [vLLM](https://github.com/vllm-project/vllm) (v0.23.0+) — 参见 [recipes](https://recipes.vllm.ai/zai-org/GLM-5.2)
 - [Transformers](https://github.com/huggingface/transformers) (v0.5.12+) — 参见 [transformers docs](https://github.com/huggingface/transformers/blob/main/docs/source/en/model_doc/glm_moe_dsa.md)
 - [KTransformers](https://github.com/kvcache-ai/ktransformers) (v0.5.12+) — 参见 [tutorial](https://github.com/kvcache-ai/ktransformers/blob/main/doc/en/kt-kernel/GLM-5.2-Tutorial.md)
+- [Unsloth](https://github.com/unslothai/unsloth) (v0.1.47-beta+) — 参见 [guide](https://unsloth.ai/docs/models/glm-5.2)
 - 在 `Ascend NPU` 平台上部署时，支持 vLLM-Ascend、xLLM 、SGLang 等推理框架，参见 [这里](example/ascend.md)
 
 GLM-5 支持通过 `reasoning_effort` 参数控制思考力度，可选 `max` 和 `high` 两档。**默认为 `max`** —— 若不设置 `reasoning_effort`（或设置为 `high` 以外的任意值），模型均按 `Max` 运行；如需使用 `High` 档，必须显式传入 `reasoning_effort="high"`。 对于榜单复现等默认场景，请保持 `Max`（无需任何设置）；仅当确实需要 `High` 档时再设置 `reasoning_effort="high"`。如需完全关闭思考，可设置 `enable_thinking=false`。
